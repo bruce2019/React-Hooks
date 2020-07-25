@@ -13,6 +13,7 @@ export default class Greeting extends React.Component {
   handleFirstNameChange = (e) => this.setState({ firstName: e.target.value });
   handleLastNameChange = (e) => this.setState({ lastName: e.target.value });
 
+  //using local storage so that we don't loose data on page reload.
   componentDidUpdate() {
     window.localStorage.setItem('classFirstName', this.state.firstName);//, [this.state.firstName];
     window.localStorage.setItem('classLastName', this.state.lastName);//, [this.state.lastName];
